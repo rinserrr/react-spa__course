@@ -6,7 +6,7 @@ import './vendor.css';
 // Чтобы исправить ошибку, нужно добавить проверку типа для свойства vendor с помощью библиотеки prop-types.
 function Vendor({vendor}) {
   return (
-    <small className='classVendor'>Артикул: &nbsp;{vendor}</small>
+    <small className='vendor'>Артикул: &nbsp;{vendor}</small>
   );
 }
 

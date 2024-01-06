@@ -20,7 +20,7 @@ function ProductPage({product}) {
         <Title title={product.name} />
         <Vendor vendor={product.code} />
 
-        <div className='div' style={{ display: "flex" }}>
+        <div style={{ display: "flex" }}>
           <Image src={product.src} />
 
           <div>
