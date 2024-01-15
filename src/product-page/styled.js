@@ -15,8 +15,8 @@ export const StyledSection = styled.section`
 
     font-display: swap;
     src:
-      url("../../src/fonts/consolas.woff") format("woff"),
-      url("../../src/fonts/consolas.woff2") format("woff2");
+      url("../../src/fonts/consolas.woff") format("font-woff"),
+      url("../../src/fonts/consolas.woff2") format("font-woff2");
   }
 
   @font-face {
@@ -26,8 +26,8 @@ export const StyledSection = styled.section`
 
     font-display: swap;
     src:
-      url("../../src/fonts/consolas-bold.woff") format("woff"),
-      url("../../src/fonts/consolas-bold.woff2") format("woff2");
+      url("../../src/fonts/consolas-bold.woff") format("woff") format('font-woff'),
+      url("../../src/fonts/consolas-bold.woff2") format("woff2") format('font-woff2');
   }
 
   body {

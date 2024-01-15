@@ -13,8 +13,3 @@ export const StyledSpan = styled.span`
   font-weight: 400;
 `;
 
-export const StyledButton = styled.button`
-  height: 21px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13.33px;
-`;
