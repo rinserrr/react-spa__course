@@ -10,7 +10,8 @@ import {createRoot} from 'react-dom/client';
 import {product} from "./mock";
 
 
-import ProductPage from './product-page';
+// import ProductPage from './product-page';
+import ProductPage from './product-page/product-page';
 
 // 1
 // const rootElement = document.getElementById("root");

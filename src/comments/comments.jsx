@@ -1,4 +1,3 @@
-
 function Comments({ comments }) {
   return (
     <div>
@@ -15,5 +14,6 @@ function Comments({ comments }) {
     </div>
   );
 }
+
 
 export default Comments;
