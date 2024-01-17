@@ -12,15 +12,29 @@ import Description from "../description/description";
 import Comments from "../comments/comments";
 import Popularity from "../popularity/popularity";
 
+import Tabs from '../tabs/tabs';
+
 
 function ProductPage({product}) {
   const isSmall = false;
+
+  const tabs = [
+    {
+      title: "Описание",
+      content: <Description text={product.description} />
+    },
+    {
+      title: "Комментарии",
+      content: <Comments comments={product.comments} />
+    }
+  ];
+
 
   return (
     <React.Fragment>
       <StyledSection>
         {/* <Title title={product.name} /> */}
-        <Title small={isSmall ? "small-value" : undefined}>{product.name}</Title>
+        <Title className='title' small={isSmall ? "small-value" : undefined}>{product.name}</Title>
 
 
         <Vendor vendor={product.code} />
@@ -48,10 +62,14 @@ function ProductPage({product}) {
         </div>
 
 
+        <Tabs tabs={tabs} tabIndex={1} />
 
-          <Description text={product.description} />
-          <Comments comments={product.comments} />
 
+        <br /><br /><br /><br /><hr />
+
+
+        <Description text={product.description} />
+        <Comments comments={product.comments} />
 
 
       </StyledSection>

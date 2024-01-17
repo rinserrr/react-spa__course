@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const buttonOptions = {
   large: {
+    // width: "auto",
     height: "40px",
     padding: "40px",
     fontSize: "24px",
@@ -10,7 +11,8 @@ export const buttonOptions = {
     color: "green"
   },
   medium: {
-    width: "58.16px",
+    // width: "58.16px",
+    // width: "auto",
     height: "21px",
     padding: "5px",
     fontSize: "14px",
@@ -18,6 +20,7 @@ export const buttonOptions = {
     color: "blue"
   },
   small: {
+    // width: "auto",
     height: "20px",
     padding: "8px",
     fontSize: "16px",
@@ -28,7 +31,8 @@ export const buttonOptions = {
 
 
 const Button = styled.button`
-  width: 56.8333px;
+  // width: 56.8333px;
+  // width: auto;
   height: 19.3333px;
   padding: 0;
   border: none;
@@ -48,8 +52,12 @@ const Button = styled.button`
 
   &:active,
   &:hover {
-    background: none;
-    box-shadow: none;
+    background-color: orange;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    opacity: 0.6;
   }
 `;
 
