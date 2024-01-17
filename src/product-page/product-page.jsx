@@ -14,10 +14,15 @@ import Popularity from "../popularity/popularity";
 
 
 function ProductPage({product}) {
+  const isSmall = false;
+
   return (
     <React.Fragment>
       <StyledSection>
-        <Title title={product.name} />
+        {/* <Title title={product.name} /> */}
+        <Title small={isSmall ? "small-value" : undefined}>{product.name}</Title>
+
+
         <Vendor vendor={product.code} />
 
         <div style={{ display: "flex" }}>
@@ -42,9 +47,13 @@ function ProductPage({product}) {
           </div>
         </div>
 
-        <Description text={product.description} />
 
-        <Comments comments={product.comments} />
+
+          <Description text={product.description} />
+          <Comments comments={product.comments} />
+
+
+
       </StyledSection>
     </React.Fragment>
   );
