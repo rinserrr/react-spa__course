@@ -1,8 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-
-
-import { StyledH2, StyledSpan } from './styled';
 import {Button as ElementButton, buttonOptions} from "./../elements";
 
 
@@ -13,37 +9,33 @@ const StyledElementButton = styled(ElementButton)`
     const theme = buttonOptions[props.size || "medium"];
 
     return `
-      padding-left: ${theme.padding};
-      padding-right: ${theme.padding};
-      height: ${theme.height};
-      font-size: ${theme.fontSize};
-      color: ${theme.color};
-      border-radius: ${theme.radius};
-      `;
+      padding: ${theme.padding};
+    `;
   }}
 
-  width: auto;
+  margin-top: 20px;
+  padding: 0;
   border: none;
   cursor: pointer;
+  box-shadow: none;
   display: block;
   background-color: yellow;
-
-  &:active {
-    opacity: 0.4;
-  }
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  -webkit-transition: background-color 0.3s,box-shadow 03s;
+  transition: background-color 0.3s,box-shadow 03s;
+  height: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+  border-radius: 5px;
 `;
 
-
-
-function Description({text}) {
+function Description({ text }) {
   return (
-    <React.Fragment>
-      <div>
-        <StyledH2 className='descriptionTitle'>Описание</StyledH2>
-        <StyledSpan className='descriptionText'>{text}</StyledSpan>&nbsp;
-        <StyledElementButton type="button" className='descriptionButton' size={"large"}>Подробнее</StyledElementButton>
-      </div>
-    </React.Fragment>
+    <>
+      {text}
+      <StyledElementButton>Подробнее</StyledElementButton>
+    </>
   );
 }
 
